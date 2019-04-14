@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Home</title>
+
+    <!-- Bootstrap Core CSS -->
+    <!-- <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
+    crossorigin="anonymous"> <!--navigation design-->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> <!-- smooth scroll -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> <!--dropdown hamburger bar-->
+
+    smooth scrolling
+    <script>
+    $(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 800, function(){
+    
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+        });
+        } // End if
+    });
+    });
+    </script>
+</head>
+
+
+<body id="top"> <!-- data-target="#navbar-spy" data-spy="scroll"> -->
+
+    <nav class="navbar navbar-default navbar-fixed-top ">  <!--id="navbar-spy"-->
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">Interior Design</a>
+                    <!--hamburger icon-->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span> 
+                    </button>
+                </div>
+                
+                <div id="myNavbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#part1" class="page-scroll">PROJECTS</a></li>
+                    <li><a href="#part2" class="page-scroll">NEWS</a></li>
+                    <li><a href="#part3" class="page-scroll">EVENTS</a></li>
+                    <li><a href="#part4" class="page-scroll">PRODUCTFIND</a></li>
+                    <li><a class="active transition" href="about.html" target="_blank">ABOUT</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+        </div>	
+        <!-- /.container-fluid -->
+    </nav>
+
+    <section id="hero" class="hero-image parallax">
+        <div class="hero-text">
+            <h1 style="font-size:50px">Interior Design</h1>
+            <p>Industrial Style</p>
+        </div>
+    </section>
+
+    <section id="part1" class="section1">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="dropdown">
+                    <h2 class="section-heading">Share with you</h2>
+                    <div class="dropdown-content">
+                        <img src="images/sc.png" alt="Self Change" width="30%" height="30%">
+                        <div style="padding:15px;text-align:center;">Self Change</div>
+                    </div>
+                </div>
+                <hr class="thematic_break"> <!--a thematic break-->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 text-center">
+                <i class="fa fa-4x fa-heart text-primary sr-icons" style="color:#F3A60D;"></i>                  
+                <h3>Belief</h3>
+                <p class="text-muted">Believe It Or Not</p>
+            </div>
+            <div class="col-sm-4 text-center">
+                <div class="dropdown">
+                    <i class="fa fa-4x fa-pencil text-primary sr-icons" style="color:#F3A60D"></i>
+                    <h3>Goal</h3>
+                    <div class="dropdown-content img-rounded">
+                        <p>If you set your goals ridiculously high and it’s a failure, <br>you will fail above everyone else’s success. </p>
+                    </div>
+                    <p class="text-muted">Set A Ridiculous Goal</p>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center">
+                <i class="fa fa-4x fa-globe fa-spin text-primary sr-icons" style="color:#F3A60D"></i>
+                <h3>Diligent</h3>
+                <p class="text-muted">Keep Moving On</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="part2" class="section2">
+        <div class="row portfolio">
+            <div class="col-sm-6 container">
+                <a href="miner.html" class="transition"><img src="image_button/1.jpg" alt=""></a>
+                <div class="text middle">Miner</div>
+            </div>
+            <div class="col-sm-6 container">
+                <a href="paper.html" class="transition"><img src="image_button/2.jpg" alt=""></a>
+                <div class="text middle">Paper</div>
+            </div>
+            <div class="col-sm-6 container">
+                <a href="caterpillar.html" class="transition"><img src="image_button/3.jpg" alt=""></a>
+                <div class="text middle">Caterpillar</div>
+            </div>
+            <div class="col-sm-6 container">
+                <a href="sea.html" class="transition"><img src="image_button/4.jpg" alt=""></a>
+                <div class="text middle">Cross Sea</div>
+            </div>
+            <div class="col-sm-6 container">
+                <a href="health.html" class="transition"><img src="image_button/5.jpg" alt=""></a>
+                <div class="text middle">Health</div>
+            </div>
+            <div class="col-sm-6 container">
+                <a href="edison.html" class="transition"><img src="image_button/6.jpg" alt=""></a>
+                <div class="text middle">Edison</div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="part3" class="section3 text-center">
+        <!-- Third Container (Grid) -->
+        <h3 style="margin: 50px">Tips</h3><br>
+        <div class="row">
+            <div class="col-sm-4">
+            <!-- <img src="../images/mood.jpeg" style="width:80%;margin-left:5px;" alt="Image"> -->
+            <div style="margin: 20px">
+                <h4>Mood</h4>
+                <p>
+                    一、釋放情緒<br>
+                    二、與人交流<br>
+                    三、多看書籍<br>
+                    四、寫寫日記<br>
+                    五、充實自我<br>
+                    六、不斷學習<br>
+                    七、獎勵自己<br>
+                    八、跳脫痛苦
+                </p>
+            </div>
+            </div>
+            <div class="col-sm-4"><br>
+            <!-- <img src="../images/yoga.jpeg" style="width:80%" alt="Image"> -->
+            <div style="margin: 20px"><br><br>
+                <h4>Yoga</h4>
+                <p>
+                    一、 暗暗的房間，鬆鬆的衣褲<br>
+                    二、 深深地呼吸三次，慢-憋-吐，如釋重負<br>
+                    三、 潛意識引導各個部位放鬆，約6~7分鐘
+                </p>
+            </div>
+            </div>
+            <div class="col-sm-4">
+            <!-- <img src="../images/formula.jpeg" style="width:80%;margin-right:5px;" alt="Image"> -->
+            <div style="margin: 20px">
+                <h4>Formula</h4>
+                <p>
+                    一、 記取教訓＋對症下藥＝積極進取（信念）<br>
+                    二、 失敗＝放棄，失敗≠做不到<br>
+                    三、 ∞堅持到底的信心
+                </p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="part4" class="section4 parallax"></section>
+
+    <!-- Footer -->
+    <footer >
+        <div class="row">
+            <p class="col-sm-4">&copy; 2019 Interior Design</p>
+            <ul class="col-sm-8">
+                <li class="col-sm-1">
+                    <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/twitter.svg">
+                </li>
+                <li class="col-sm-1">
+                    <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/facebook.svg">
+                </li>
+                <li class="col-sm-1">
+                    <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/instagram.svg">
+                </li>
+                <li class="col-sm-1">
+                    <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/medium.svg">
+                </li>
+            </ul>
+        </div>
+    <!-- <p>Know more about Eileen by
+    <a href="http://www.facebook.com/profile.php?id=100001369046293" class="fa fa-facebook"></a>
+    <a href="http://www.instagram.com/eileen8432/" class="fa fa-instagram"></a>
+    </p>  -->
+    </footer>
+
+</body>
+</html>
