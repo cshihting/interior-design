@@ -132,7 +132,7 @@ footer li img {
   position: relative;
 	text-align: center;
 	color: #FFFFFF;
-  background-color: #F3A60D;
+  background-color: #c5c5c5;
   min-width: 250px;
   box-shadow: 10px 12px 10px 0px rgba(0,0,0,0.3);
   padding: 7px;
@@ -182,22 +182,15 @@ footer li img {
   opacity: 1;
 }
 
-.text {
+.button-text {
   background-color: #CFCFCF;
   color: white;
   font-size: 17px;
   padding: 16px 32px;
 }
 
-.text-muted {
-  color: white;
+.part1-text {
   font-size: 17px;
-  padding: 8px 20px;
-}
-
-.text-food {
-  color: white;
-  font-size: 22px;
   padding: 8px 20px;
 }
 
