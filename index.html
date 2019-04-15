@@ -19,36 +19,70 @@
 
     <script>
     $(document).ready(function(){
-    // Add smooth scrolling to all links
-    $("a").on('click', function(event) {
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
 
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-        // Prevent default anchor click behavior
-        event.preventDefault();
+                // Store hash
+                var hash = this.hash;
 
-        // Store hash
-        var hash = this.hash;
-
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-        $('html, body').animate({
-            scrollTop: $(hash).offset().top
-        }, 800, function(){
-    
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+            
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
         });
-        } // End if
     });
+
+
+    // change the nav bar size
+    $(document).ready(function () {
+
+        $(window).on('scroll', function () {
+            if ($(window).scrollTop() >= 20) { // use any value lower than the navbar height, [20] is an example
+
+                $('.navbar').css({ // reducing the vertical padding from 25px to 10px
+                    'padding-top': '10px',
+                    'padding-bottom': '10px'
+                });
+
+            } else {
+
+                $('.navbar').css({ // reset the vertical padding to its initial value [25px]
+                    'padding-top': '20px',
+                    'padding-bottom': '20px'
+                });
+
+            }
+        });
+
     });
+
+    $(document).ready(function () {
+
+        $(window).on('scroll', function () {
+            if ($(window).scrollTop() >= 20) {
+                $('.navbar').addClass('compressed');
+            } else {
+                $('.navbar').removeClass('compressed');
+            }
+        });
+
+    });       
     </script>
 </head>
 
 
-<body id="top"> <!-- data-target="#navbar-spy" data-spy="scroll"> -->
-
-    <nav class="navbar navbar-default navbar-fixed-top ">  <!--id="navbar-spy"-->
+<body id="top" data-target="#navbar-spy" data-spy="scroll"> <!--spy refers to which section you are at-->
+    <nav id="navbar-spy" class="navbar navbar-default navbar-fixed-top ">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -60,14 +94,44 @@
                         <span class="icon-bar"></span> 
                     </button>
                 </div>
-                
+
                 <div id="myNavbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#part1" class="page-scroll">PROJECTS</a></li>
+                    <div class="nav-dropdown">
+                        <li>
+                            <button id="projects" class="nav-dropbtn">PROJECTS</button>
+                            <!-- <a href="#part1" class="page-scroll">PROJECTS</a> -->
+                            <div class="nav-dropdown-content">
+                                <div class="nav-header">
+                                    <h2>Mega Menu</h2>
+                                </div>   
+                                <div class="row">
+                                    <div class="column">
+                                        <h3>Category 1</h3>
+                                        <a href="#">Link 1</a>
+                                        <a href="#">Link 2</a>
+                                        <a href="#">Link 3</a>
+                                    </div>
+                                    <div class="column">
+                                        <h3>Category 2</h3>
+                                        <a href="#">Link 1</a>
+                                        <a href="#">Link 2</a>
+                                        <a href="#">Link 3</a>
+                                    </div>
+                                    <div class="column">
+                                        <h3>Category 3</h3>
+                                        <a href="#">Link 1</a>
+                                        <a href="#">Link 2</a>
+                                        <a href="#">Link 3</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
                     <li><a href="#part2" class="page-scroll">NEWS</a></li>
                     <li><a href="#part3" class="page-scroll">EVENTS</a></li>
                     <li><a href="#part4" class="page-scroll">PRODUCTFIND</a></li>
-                    <li><a class="active transition" href="about.html" target="_blank">ABOUT</a></li>
+                    <li><a class="active transition" href="about.html" target="_blank">ABOUT</a><li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
