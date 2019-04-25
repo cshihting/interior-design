@@ -13,9 +13,9 @@
     integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
     crossorigin="anonymous"> <!--navigation design-->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> <!-- smooth scroll -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> <!--dropdown hamburger bar-->
-
 
     <script>
     $(document).ready(function(){
@@ -41,8 +41,9 @@
             } // End if
         });
     });
+    </script>
 
-
+    <script>
     // change the nav bar size
     $(document).ready(function () {
 
@@ -95,11 +96,12 @@
                     </button>
                 </div>
 
-                <div id="myNavbar" class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
+                <div id="myNavbar" class="collapse navbar-collapse nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right">
+                <!-- <div id="myTopNav" class="topnav"> -->
                     <div class="nav-dropdown">
                         <li>
-                            <button id="projects" class="nav-dropbtn">PROJECTS</button>
+                            <button class="nav-dropbtn">PROJECTS</button>
                             <!-- <a href="#part1" class="page-scroll">PROJECTS</a> -->
                             <div class="nav-dropdown-content">
                                 <div class="nav-header">
@@ -128,11 +130,11 @@
                             </div>
                         </li>
                     </div>
-                    <li><a href="#part2" class="page-scroll">NEWS</a></li>
-                    <li><a href="#part3" class="page-scroll">EVENTS</a></li>
-                    <li><a href="#part4" class="page-scroll">PRODUCTFIND</a></li>
-                    <li><a class="active transition" href="about.html" target="_blank">ABOUT</a><li>
-                    </ul>
+                    <li><a href="#part2">NEWS</a></li>
+                    <li><a href="#part3">EVENTS</a></li>
+                    <li><a href="#part4">PRODUCTFIND</a></li>
+                    <li><a class="active transition" href="about.html" target="_blank">ABOUT</a></li>
+                </ul>
                 </div>
                 <!-- /.navbar-collapse -->
         </div>	
